@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Search Box -->
+
+    <!-- Sell Products Button -->
+
+    <!-- Inventory List -->
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@+id/searchButton"
+        android:hint="Search Inventory"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="8dp" />
+
+    <ListView
+        android:id="@+id/inventoryListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchEditText"
+        android:layout_above="@id/filterOptions"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+    <!-- Filter Options -->
+    <LinearLayout
+        android:id="@+id/filterOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+
+
+        <!-- Location Filter -->
+
+        <Spinner
+            android:id="@+id/locationFilterSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:entries="@array/location_filter_options"
+            android:minHeight="48dp"
+            android:prompt="@string/location_filter_prompt" />
+
+        <Button
+            android:id="@+id/chatbuttn"
+            android:layout_width="139dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="CHAT" />
+
+        <Button
+            android:id="@+id/logoutbutn"
+            android:layout_width="75dp"
+            android:layout_height="64dp"
+            android:text="LOG OUT" />
+
+        <Button
+            android:id="@+id/sellButton"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="8dp"
+            android:text="Sell Products" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/inventoryListView"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="9dp"
+        android:layout_toStartOf="@+id/sellButton"
+        android:text="Search "
+        tools:ignore="NotSibling" />
+</RelativeLayout>
